@@ -4,16 +4,13 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   flex-direction: column;
-  max-height: 100vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  min-height: 100vh; /* New line added to fill at least the viewport height */
 }
 
 .topnav {
   background-color: #9a3b3b;
   overflow: hidden;
   text-align: center;
-  /* height: 5vh; */
 }
 
 .topnav a {
@@ -41,10 +38,11 @@ header {
   text-align: center;
   padding: 0;
   margin: 0;
-  height: 90vh;
+  /* Remove the fixed height to allow the content to define the height */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 
 .slide-fade {
@@ -129,7 +127,7 @@ footer {
 
   header {
     padding: 50px 0;
-    height: 60vh;
+    /* Adjusted to padding to maintain consistency */
   }
 
   .slide-fade h1 {
@@ -144,7 +142,7 @@ footer {
 @media (max-width: 480px) {
   header {
     padding: 30px 0;
-    height: 50vh;
+    /* Adjusted padding to maintain consistency */
   }
 
   .slide-fade h1 {
