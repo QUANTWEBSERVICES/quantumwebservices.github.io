@@ -1,0 +1,192 @@
+body {
+  background-color: #c08261;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Use min-height to ensure the content pushes the footer down */
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.topnav {
+  background-color: #9a3b3b;
+  overflow: hidden;
+  text-align: center;
+}
+
+.topnav a {
+  display: inline-block;
+  color: #ebef95;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #884a39;
+  color: white;
+}
+
+.tbl_row {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  margin: auto;
+}
+
+.tbl_col {
+  flex: 1;
+  background: #fff;
+  margin: 0 1rem;
+  border-radius: 05px;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.tbl_col p {
+  font-size: 22px;
+}
+
+.tbl_col h3 {
+  font-size: 2.5rem;
+  margin: 20px 0 40px;
+  font-weight: 500;
+  background: #93cb52;
+}
+
+.tbl_col h3 span {
+  font-size: 1.2rem;
+}
+
+.tbl_col ul {
+  text-align: left;
+  margin-left: 3rem;
+  list-style: none;
+}
+
+.tbl_col ul li {
+  margin: 1.5rem 0;
+}
+
+.tbl_col ul li::before {
+  content: "\21A6";
+  margin-right: 10px;
+  color: #93cb52;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.tbl_col button {
+  width: 75%;
+  border: none;
+  padding: 14px 0;
+  background: transparent;
+  color: #333;
+  font-size: 15px;
+  border: 1px solid #93cb52;
+  border-radius: 05px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tbl_col button:hover {
+  background: #93cb52;
+  transition: 0.4s;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.footer-logo h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-logo img {
+  max-width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav {
+    padding: 10px 0;
+  }
+  .topnav a {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+  .tbl_col {
+    flex: 1;
+    margin: 0;
+  }
+  .tbl_col p {
+    font-size: 16px;
+  }
+  .tbl_col h3 {
+    font-size: 1.5rem;
+  }
+  .tbl_col h3 span {
+    font-size: 1rem;
+  }
+  .tbl_col ul li {
+    margin: 1rem 0;
+  }
+  .tbl_col ul li::before {
+    content: "\21A6";
+    margin-right: 10px;
+    color: #93cb52;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .tbl_col button {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+  .footer-logo img {
+    max-width: 80%;
+  }
+}

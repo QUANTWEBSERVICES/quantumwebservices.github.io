@@ -1,0 +1,253 @@
+body {
+  /* background-color: #c08261; */
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column; /* Create a flex container for the page */
+  min-height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.topnav {
+  background-color: #9a3b3b;
+  overflow: hidden;
+  text-align: center;
+  /* height: 5vh; */
+}
+
+.topnav a {
+  display: inline-block;
+  color: #ebef95;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #884a39;
+  color: white;
+}
+.content-boxes {
+  background-color: #c08261;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.content-boxes .box {
+  position: relative;
+  width: calc(33% - 20px);
+  height: calc(350px - 20px);
+  background-color: #884a39;
+  float: left;
+  margin: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.content-boxes .box .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.content-boxes .box:hover .icon {
+  top: 20px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.content-boxes .box .icon .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.content-boxes .box:hover .icon .logo {
+  font-size: 40px;
+}
+
+.content-boxes .box .content {
+  position: absolute;
+  top: 100%;
+  height: calc(100% - 100px);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.content-boxes .box:hover .content {
+  top: 100px;
+  opacity: 1;
+}
+
+.content-boxes .box .content h3 {
+  margin: 0px;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+.content-boxes .box .content p {
+  margin: 10px 0 10px;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.content-boxes .box:nth-child(1) .icon {
+  background: #ad1457;
+}
+
+.content-boxes .box:nth-child(1) {
+  background: #f06292;
+}
+
+.content-boxes .box:nth-child(2) .icon {
+  background: #d84315;
+}
+
+.content-boxes .box:nth-child(2) {
+  background: #ff7043;
+}
+.content-boxes .box:nth-child(3) .icon {
+  background: #00838f;
+}
+
+.content-boxes .box:nth-child(3) {
+  background: #26c6da;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.footer-logo h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-logo img {
+  max-width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav {
+    padding: 10px 0;
+  }
+
+  .topnav a {
+    font-size: 14px;
+    padding: 10px 8px;
+  }
+
+  .content-boxes .box {
+    width: calc(50% - 20px);
+  }
+
+  .content-boxes .box .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .content-boxes .box .icon .logo {
+    font-size: 40px;
+  }
+
+  .content-boxes .box .content {
+    top: 60px;
+    height: calc(100% - 60px);
+  }
+
+  .content-boxes .box .content h3 {
+    font-size: 20px;
+  }
+
+  .content-boxes .box .content p {
+    font-size: 14px;
+  }
+
+  .footer-logo img {
+    max-width: 60%;
+  }
+
+  .footer-links ul {
+    display: none;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-links ul {
+    display: block;
+  }
+
+  .footer-links li {
+    margin: 10px 0;
+  }
+}
