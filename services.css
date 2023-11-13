@@ -1,22 +1,60 @@
+/* Reset some basic elements */
+html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+section,
+div,
+main,
+footer {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* Use a box-sizing border-box for all elements */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Space between content and footer */
+  width: 100%;
+}
+
+/* Navigation Bar Styles */
 .topnav {
-  background-color: #9a3b3b;
+  background-color: #000000;
   overflow: hidden;
-  text-align: center;
+  position: relative;
+  z-index: 10;
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: space-between; /* Adjust content spacing */
+  align-items: center;
 }
 
 .topnav a {
-  display: inline-block;
-  color: #ebef95;
+  display: block;
+  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -29,149 +67,153 @@ body {
 }
 
 .topnav a.active {
-  background-color: #884a39;
+  background-color: #4caf50;
   color: white;
 }
 
-.content-boxes {
-  background-color: #c08261;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  flex-grow: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.topnav .instagram-icon {
+  margin-left: auto; /* Pushes the icon to the far right */
+  display: flex; /* To use Flexbox for centering the icon */
+  align-items: center; /* Center the icon vertically */
+  padding: 14px 16px; /* Maintain consistent padding */
 }
 
-.content-boxes .box {
-  width: calc(33.3333% - 20px);
-  margin: 10px;
-  box-sizing: border-box;
-  border-radius: 10px;
+.topnav .instagram-icon i {
+  font-size: 24px; /* Adjust icon size as needed */
+  color: #f2f2f2; /* Icon color, you can set it to match your design */
+}
+
+main {
+  flex: 1; /* Allows main to expand and fill available space */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  color: #fff; /* White text color */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
 }
 
-.content-boxes .box .icon {
-  transition: 0.5s;
-  z-index: 1;
+/* Apply base styles to all service-detail sections */
+section.service-detail {
+  flex-grow: 1; /* Grow to fill available space */
+  padding: 20px; /* Padding inside the section */
+  margin: 0; /* No margins */
+  text-align: center;
+  color: #ccc; /* Light grey color for the text */
 }
 
-.content-boxes .box:hover .icon {
-  border-radius: 50%;
+/* Assign unique background colors to each service detail section */
+#web-design {
+  background-color: #1e73be; /* Example color for Web Design */
 }
 
-.content-boxes .box .icon .logo {
-  transition: 0.5s;
-  color: #fff;
+#seo-management {
+  background-color: #27ae60; /* Example color for SEO Management */
 }
 
-.content-boxes .box:hover .icon .logo {
+#mobile-friendly {
+  background-color: #8e44ad; /* Example color for Mobile Friendly */
 }
 
-.content-boxes .box .content {
-  transition: 0.5s;
-  opacity: 0;
+#clean-coding {
+  background-color: #f39c12; /* Example color for Clean Coding */
 }
 
-.content-boxes .box:hover .content {
-  opacity: 1;
+/* Enhanced heading styles */
+section.service-detail h2 {
+  font-size: 2.5em; /* Larger font size for headings */
+  color: #ffffff; /* White color for contrast */
+  text-shadow: 2px 2px 4px #000000; /* Text shadow for depth */
+  margin-top: 0.5em; /* Top margin */
+  margin-bottom: 0.5em; /* Bottom margin */
 }
 
-.content-boxes .box .content h3 {
-  color: #fff;
-  font-size: 24px;
+/* Enhanced paragraph styles */
+section.service-detail p {
+  font-size: 1.25em; /* Larger font size for paragraphs */
+  line-height: 1.6; /* Increased line height for readability */
+  color: #dddddd; /* Light grey color */
+  margin-bottom: 1em; /* Bottom margin */
+  text-align: center; /* Left align text */
 }
 
-.content-boxes .box .content p {
-  color: #fff;
-  font-size: 16px;
+/* Additional styles for the button */
+.pricing-button {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.content-boxes .box:nth-child(1) .icon {
-  background: #ad1457;
-}
-
-.content-boxes .box:nth-child(1) {
-  background: #f06292;
-}
-
-.content-boxes .box:nth-child(2) .icon {
-  background: #d84315;
-}
-
-.content-boxes .box:nth-child(2) {
-  background: #ff7043;
-}
-
-.content-boxes .box:nth-child(3) .icon {
-  background: #00838f;
-}
-
-.content-boxes .box:nth-child(3) {
-  background: #26c6da;
+.pricing-button:hover {
+  background-color: #367c2b;
+  text-decoration: none;
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 0;
-  margin: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  flex-shrink: 0;
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20px 0;
-}
-
-.footer-logo h2 {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: white;
-}
-
-.footer-bottom {
-  background-color: #222;
-  padding: 10px 0;
-  text-align: center;
+  width: 100%;
 }
 
 .footer-logo img {
-  max-width: 40%;
+  width: 100px;
+  height: auto;
 }
 
-@media screen and (max-width: 768px) {
-  .content-boxes .box {
-    width: calc(50% - 20px); /* 2 boxes per row on tablets */
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Responsive styling for the navbar */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    display: block;
+    text-align: left;
   }
-}
 
-@media screen and (max-width: 480px) {
-  .content-boxes .box {
-    width: 100%; /* Full width boxes on mobile */
-    margin: 10px 0;
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom {
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  section.service-detail p {
+    text-align: center; /* Center text on small screens */
+  }
+
+  /* Adjustments for small screens */
+  section.service-detail {
+    padding: 10px; /* Less padding on small screens */
   }
 }
