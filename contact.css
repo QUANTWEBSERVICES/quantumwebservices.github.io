@@ -32,7 +32,6 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 60px; /* This should be equal to the height of your navbar */
 }
 
 /* Navigation Bar Styles */
@@ -79,23 +78,30 @@ main {
 /* Contact Intro Styles */
 .contact-intro {
   background-color: darksalmon;
-  padding: 20px;
+  padding: 100px 20px;
   text-align: center;
   color: white;
   /* Removed margin-top to have no space between navbar and this section */
+  min-height: 50vh;
 }
 
 .contact-intro h1 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 60px;
 }
 
 .contact-intro p {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.contact-form-section {
+  background-color: lightblue;
 }
 
 /* Contact Form Section styles */
-.contact-form-section {
-  background: #ffffff;
+.frm {
+  background: white;
   padding: 40px;
   max-width: 600px;
   margin: 20px auto;
@@ -126,7 +132,17 @@ main {
   font-size: 16px;
   margin-top: 20px;
 }
-
+/* Pricing FAQ Styles */
+.more-features {
+  flex-grow: 1; /* Grow to take available space */
+  padding: 50px 20px;
+  background-color: lightyellow;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spreads out the content */
+  min-height: 30vh;
+}
 .btn-main:hover {
   background-color: #367c39;
 }
