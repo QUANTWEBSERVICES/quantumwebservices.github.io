@@ -24,6 +24,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
 /* Ensure main content starts right below the navbar */
@@ -32,6 +34,9 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  margin-top: 0;
 }
 
 /* Navigation Bar Styles */
@@ -83,6 +88,7 @@ main {
   color: white;
   /* Removed margin-top to have no space between navbar and this section */
   min-height: 50vh;
+  width: 100%;
 }
 
 .contact-intro h1 {
@@ -108,6 +114,23 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #e1e1e1;
   border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .frm {
+    padding: 20px; /* Reduced padding */
+    margin: 10px; /* Reduced margin */
+    max-width: 95%; /* Reduced width to ensure it doesn't overflow the viewport */
+  }
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+  .contact-form-section {
+    padding: 0; /* Adjust padding as needed */
+    width: auto; /* Let it naturally fill the width of the parent */
+    /* Do not set a max-width here unless necessary */
+  }
 }
 
 .contact-form label {
@@ -185,7 +208,7 @@ footer {
   }
 
   main {
-    padding-top: 60px; /* Adjust if the mobile navbar height is different */
+    padding-top: 0; /* Adjust if the mobile navbar height is different */
   }
 }
 
