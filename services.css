@@ -43,7 +43,6 @@ body {
 /* Navigation Bar Styles */
 .topnav {
   background-color: #000000;
-  overflow: hidden;
   position: relative;
   z-index: 10;
   width: 100%; /* Full width */
